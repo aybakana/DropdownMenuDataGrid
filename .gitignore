@@ -1,13 +1,8 @@
-/ProMgrApp/obj
-/ProMgrApp/bin
-/ConfigLib/obj
-/ConfigLib/bin
-/CoreLib/obj
-/CoreLib/bin
-/genlicense
 /resources
 .vs/
 bin
 obj
 /packages
 screenshots
+/DropdownMenuDataGrid/bin
+/DropdownMenuDataGrid/obj
