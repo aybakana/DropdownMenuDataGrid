@@ -30,15 +30,9 @@
                                                 <ControlTemplate TargetType="ContextMenu">
                                                     <Border Background="LightGray" BorderBrush="DarkGray" BorderThickness="1">
                                                         <StackPanel>
-                                                            <ItemsControl ItemsSource="{Binding FilterOptions}">
-                                                                <ItemsControl.ItemTemplate>
-                                                                    <DataTemplate>
-                                                                        <CheckBox Content="{Binding Name}" IsChecked="{Binding IsChecked, Mode=TwoWay}" />
-                                                                    </DataTemplate>
-                                                                </ItemsControl.ItemTemplate>
-                                                            </ItemsControl>
-                                                            <Separator />
-                                                            <Button Content="Apply Filter" Command="{Binding PlacementTarget.DataContext.ApplyFilterCommand, RelativeSource={RelativeSource AncestorType=ContextMenu}}" />
+                                                            <local:FilterMenuControl HorizontalAlignment="Right" VerticalAlignment="Center"
+                                                                                 FilterOptions="{Binding DataContext.FilterOptions, RelativeSource={RelativeSource AncestorType=ContextMenu}}"
+                                                                                 ApplyFilterCommand="{Binding DataContext.ApplyFilterCommand, RelativeSource={RelativeSource AncestorType=ContextMenu}}" />
                                                         </StackPanel>
                                                     </Border>
                                                 </ControlTemplate>
